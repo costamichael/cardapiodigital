@@ -1,0 +1,20 @@
+.dragHelper{
+    display: block;
+    padding: 30px;
+    margin-top: 10px;
+    background: #fff;
+    border: 2px dashed #c2cdda;
+    border-radius: 3px;
+    text-align: center;
+    -webkit-transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease;
+}
+.item{
+    margin-top: 10px;
+    padding: 10px;
+}
+
+#buscar .empty-message {
+    padding: 5px 10px;
+    text-align: center;
+}
