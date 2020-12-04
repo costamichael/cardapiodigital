@@ -44,7 +44,7 @@
         <div class="col-4">
             <select name="categoria" class="form-control select2 selectcategoria" id="categoria_id" onchange="$('.addcategoria').html('');">
                 <option disabled selected value=""></option>
-                @foreach($categorias as $categoria)
+                @foreach($resultado['dados']['categorias'] as $categoria)
                     @if($categoria->categoria_id == null)
                         <option value="{{ $categoria->id }}">{{ $categoria->categoria }}</option>
                     @endif
@@ -186,7 +186,7 @@
                 <a href="#" class="list-group-item list-group-item-action active">
                     Últimos 5 produtos cadastrados
                 </a>
-                @foreach($produtos as $prod)
+                @foreach($resultado['dados']['produtos'] as $prod)
                     <a href="{{ route('admin.produtos.editar', $prod->id) }}" class="list-group-item list-group-item-action">R$ {{ $prod->preco. ' - ' .$prod->produto }}</a>
                 @endforeach
             </div>

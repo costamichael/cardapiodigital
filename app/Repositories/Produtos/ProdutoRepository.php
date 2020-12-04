@@ -22,7 +22,7 @@ class ProdutoRepository
                 ->CategoriaNull()
                 ->Order()
                 ->SubCategoria();
-        return $categorias;
+        return $categorias->get();
     }
 
     public function obterProduto($id)
@@ -37,7 +37,11 @@ class ProdutoRepository
         $categorias = Categorias::get();
         $insumos    = Insumos::get();
 
-        return [$produtos, $categorias, $insumos];
+        return array(
+                        'produtos'      => $produtos,
+                        'categorias'    => $categorias,
+                        'insumos'       => $insumos,
+                );
     }
 
 }
